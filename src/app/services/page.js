@@ -341,7 +341,7 @@ export default function Services() {
   };
 
   const handleBookService = (serviceName) => {
-    const whatsappNumber = "9610719306";
+    const whatsappNumber = "919610719306";
     const message = t.whatsappMessage.replace('{service}', serviceName);
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
