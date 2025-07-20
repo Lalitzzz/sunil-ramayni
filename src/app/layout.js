@@ -21,6 +21,7 @@
 
 
 
+import Footer from '@/components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
 import './globals.css';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
       <body>
         <LanguageProvider>
           {children}
+          <Footer/>
 
           {/* Floating WhatsApp Icon (with float animation) */}
           <a

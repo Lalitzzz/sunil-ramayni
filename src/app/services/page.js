@@ -273,6 +273,20 @@ export default function Services() {
             className="w-full h-[250px] sm:h-[300px] md:h-[350px]"
           ></iframe>
         </div>
+        <br/>
+        <div className="mb-10 mx-auto w-full max-w-xl rounded-lg overflow-hidden shadow-2xl">
+  <iframe
+    width="100%"
+    height="250"
+    src="https://www.youtube.com/embed/2Dl47X6gtX4?rel=0&autoplay=1&mute=1"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    className="w-full h-[250px] sm:h-[300px] md:h-[350px]"
+  ></iframe>
+</div>
+
 
         <div className="mt-16 bg-gradient-to-b from-purple-800/30 to-indigo-900/40 rounded-2xl shadow-2xl p-8 border border-purple-700/30 backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-amber-300 mb-6 text-center">{t.customHeading}</h2>

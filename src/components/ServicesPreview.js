@@ -117,6 +117,23 @@ export default function ServicesPreview() {
             </div>
           ))}
         </div>
+        
+          <br/>
+           <br/>
+
+        <div className="mb-10 mx-auto w-full max-w-xl rounded-lg overflow-hidden shadow-2xl">
+  <iframe
+    width="100%"
+    height="250"
+    src="https://www.youtube.com/embed/rLeYEkpjq-g?rel=0&autoplay=1&mute=1"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    className="w-full h-[250px] sm:h-[300px] md:h-[350px]"
+  ></iframe>
+</div>
+
 
         <div className="mt-16 text-center">
           <Link
