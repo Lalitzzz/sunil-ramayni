@@ -55,12 +55,12 @@ export default function WhyChooseUs() {
   };
 
   const t = text[language];
-const icons = [
-  <FaCheck key="check" className="text-2xl text-amber-400" />,
-  <FaAward key="award" className="text-2xl text-amber-400" />,
-  <FaHandsHelping key="hands" className="text-2xl text-amber-400" />,
-  <FaBookReader key="book" className="text-2xl text-amber-400" />,
-];
+  const icons = [
+    <FaCheck key="check" className="text-2xl text-amber-400" />,
+    <FaAward key="award" className="text-2xl text-amber-400" />,
+    <FaHandsHelping key="hands" className="text-2xl text-amber-400" />,
+    <FaBookReader key="book" className="text-2xl text-amber-400" />,
+  ];
 
   return (
     <div className="relative bg-gradient-to-b from-indigo-900 to-purple-900 py-20 overflow-hidden">
@@ -118,6 +118,23 @@ const icons = [
           </div>
         </div>
       </div>
+
+      <br />
+      <br />
+      <div className="mb-10 mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md rounded-lg overflow-hidden shadow-2xl">
+        <div className="relative pt-[177.78%]"> {/* 9:16 Aspect Ratio = 16/9 * 100% = 177.78% */}
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/YeLZXG_RjNM?rel=0&autoplay=1&mute=1"
+            title="YouTube Shorts player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+
+
     </div>
   );
 }
