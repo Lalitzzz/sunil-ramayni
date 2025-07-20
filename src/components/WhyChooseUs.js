@@ -55,12 +55,12 @@ export default function WhyChooseUs() {
   };
 
   const t = text[language];
-  const icons = [
-    <FaCheck className="text-2xl text-amber-400" />,
-    <FaAward className="text-2xl text-amber-400" />,
-    <FaHandsHelping className="text-2xl text-amber-400" />,
-    <FaBookReader className="text-2xl text-amber-400" />,
-  ];
+const icons = [
+  <FaCheck key="check" className="text-2xl text-amber-400" />,
+  <FaAward key="award" className="text-2xl text-amber-400" />,
+  <FaHandsHelping key="hands" className="text-2xl text-amber-400" />,
+  <FaBookReader key="book" className="text-2xl text-amber-400" />,
+];
 
   return (
     <div className="relative bg-gradient-to-b from-indigo-900 to-purple-900 py-20 overflow-hidden">
