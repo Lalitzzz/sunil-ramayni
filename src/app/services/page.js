@@ -311,6 +311,7 @@ import Navbar from "@/components/Navbar";
 import { FaOm, FaBook, FaFire, FaWater, FaStar } from "react-icons/fa";
 import { GiPrayerBeads, GiLotus, GiDiscussion, GiRam, GiTrident, GiIndiaGate, GiCandleFlame, GiPapers } from "react-icons/gi";
 import { useLanguage } from "../context/LanguageContext";
+import Image from "next/image";
 
 export default function Services() {
   const { language } = useLanguage();
@@ -351,7 +352,7 @@ export default function Services() {
     {
       id: 1,
       title: language === "en" ? "Ramayan Path" : "रामायण पाठ",
-      description: language === "en" 
+      description: language === "en"
         ? "Complete recitation of Ramayan over 7 or 9 days with explanations and discourses."
         : "रामायण का 7 या 9 दिनों तक पूर्ण पाठ, व्याख्या और प्रवचन सहित।",
       icon: <FaBook className="text-3xl text-amber-400" />,
@@ -411,8 +412,8 @@ export default function Services() {
     {
       id: 6,
       title: language === "en" ? "Ram Katha" : "रामकथा",
-      description: language === "en" 
-        ? "Story and life events of Lord Rama." 
+      description: language === "en"
+        ? "Story and life events of Lord Rama."
         : "भगवान राम की कथा और जीवन प्रसंग।",
       icon: <GiRam className="text-3xl text-amber-400" />,
       duration: "1-7 " + (language === "en" ? "Days" : "दिन"),
@@ -423,8 +424,8 @@ export default function Services() {
     {
       id: 7,
       title: language === "en" ? "Shrimad Bhagwat Katha" : "श्रीमद्भागवत कथा",
-      description: language === "en" 
-        ? "Narration of divine stories from Bhagwat Puran." 
+      description: language === "en"
+        ? "Narration of divine stories from Bhagwat Puran."
         : "भागवत पुराण की दिव्य कथाएं।",
       icon: <GiDiscussion className="text-3xl text-amber-400" />,
       duration: "7 " + (language === "en" ? "Days" : "दिन"),
@@ -435,8 +436,8 @@ export default function Services() {
     {
       id: 8,
       title: language === "en" ? "Shiv Katha" : "शिव कथा",
-      description: language === "en" 
-        ? "Sacred stories of Lord Shiva." 
+      description: language === "en"
+        ? "Sacred stories of Lord Shiva."
         : "भगवान शिव की पावन कथा।",
       icon: <GiTrident className="text-3xl text-amber-400" />,
       duration: "1-3 " + (language === "en" ? "Days" : "दिन"),
@@ -447,8 +448,8 @@ export default function Services() {
     {
       id: 9,
       title: language === "en" ? "Nani Bai Ka Mayra" : "नानी बाई का मायरा",
-      description: language === "en" 
-        ? "A devotional story event of Nani Bai." 
+      description: language === "en"
+        ? "A devotional story event of Nani Bai."
         : "नानी बाई के मायरे की कथा।",
       icon: <GiIndiaGate className="text-3xl text-amber-400" />,
       duration: "1 " + (language === "en" ? "Day" : "दिन"),
@@ -459,8 +460,8 @@ export default function Services() {
     {
       id: 10,
       title: language === "en" ? "Ramcharitmanas Path" : "अखंड रामचरितमानस पाठ",
-      description: language === "en" 
-        ? "Non-stop recitation of Ramcharitmanas." 
+      description: language === "en"
+        ? "Non-stop recitation of Ramcharitmanas."
         : "अखंड रामचरितमानस का पाठ।",
       icon: <GiCandleFlame className="text-3xl text-amber-400" />,
       duration: "1-9 " + (language === "en" ? "Days" : "दिन"),
@@ -471,8 +472,8 @@ export default function Services() {
     {
       id: 11,
       title: language === "en" ? "Dharmik Anushthan" : "धार्मिक अनुष्ठान",
-      description: language === "en" 
-        ? "Custom religious ceremonies." 
+      description: language === "en"
+        ? "Custom religious ceremonies."
         : "विशेष धार्मिक अनुष्ठान।",
       icon: <GiPapers className="text-3xl text-amber-400" />,
       duration: "Varies",
@@ -483,8 +484,8 @@ export default function Services() {
     {
       id: 12,
       title: language === "en" ? "Jaap Mala" : "जाप माला",
-      description: language === "en" 
-        ? "Chanting with rosary beads for meditation." 
+      description: language === "en"
+        ? "Chanting with rosary beads for meditation."
         : "जप माला द्वारा मंत्र जाप।",
       icon: <GiPrayerBeads className="text-3xl text-amber-400" />,
       duration: "1-2 " + (language === "en" ? "Hours" : "घंटे"),
@@ -495,8 +496,8 @@ export default function Services() {
     {
       id: 13,
       title: language === "en" ? "Bhajan Sandhya" : "भजन संध्या",
-      description: language === "en" 
-        ? "Devotional evening songs and music." 
+      description: language === "en"
+        ? "Devotional evening songs and music."
         : "सांध्य समय भजन की प्रस्तुति।",
       icon: <GiLotus className="text-3xl text-amber-400" />,
       duration: "2-3 " + (language === "en" ? "Hours" : "घंटे"),
@@ -528,6 +529,31 @@ export default function Services() {
       <Navbar />
 
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 z-10">
+
+
+        <div className="relative flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-800 to-purple-800 overflow-hidden">
+          {/* Background animated Om */}
+          <div className="absolute inset-0 flex items-center whitespace-nowrap overflow-hidden opacity-10 z-0 animate-omScroll">
+            <div className="text-6xl sm:text-7xl md:text-8xl font-bold text-amber-200 space-x-4 animate-marquee">
+              {Array(50).fill('ॐ').join('  ')}
+            </div>
+          </div>
+
+          {/* Image container */}
+          <div className="relative z-10 w-64 sm:w-72 md:w-80 lg:w-96 h-auto overflow-hidden rounded-2xl shadow-lg border-4 border-amber-400/30 animate-slide">
+            <Image
+              src="/images/shivji.jpg"
+              alt="Lord Shiva"
+              width={800}
+              height={1000}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+
+
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
@@ -563,7 +589,7 @@ export default function Services() {
                 </div>
               </div>
               <div className="px-6 py-4 bg-gradient-to-r from-amber-600/20 to-amber-400/20">
-                <button 
+                <button
                   onClick={() => handleBookService(service.title)}
                   className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-2 px-4 rounded-lg hover:from-amber-600 hover:to-amber-700 transition duration-300"
                 >
@@ -588,7 +614,7 @@ export default function Services() {
             className="w-full h-[250px] sm:h-[300px] md:h-[350px]"
           ></iframe>
         </div>
-        <br/>
+        <br />
         <div className="mb-10 mx-auto w-full max-w-xl rounded-lg overflow-hidden shadow-2xl">
           <iframe
             width="100%"
@@ -606,7 +632,7 @@ export default function Services() {
           <h2 className="text-3xl font-bold text-amber-300 mb-6 text-center">{t.customHeading}</h2>
           <p className="text-amber-100 mb-6 text-center">{t.customText}</p>
           <div className="text-center">
-            <button 
+            <button
               onClick={() => handleBookService(language === "en" ? "Custom Service" : "कस्टम सेवा")}
               className="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white py-3 px-8 rounded-lg hover:from-purple-700 hover:to-fuchsia-700 transition duration-300"
             >
