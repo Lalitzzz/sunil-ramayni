@@ -1,6 +1,8 @@
 'use client';
 import { useLanguage } from "@/app/context/LanguageContext";
 import Link from "next/link";
+import ZodiacRotator from "./ZodiacRotator";
+import Image from "next/image";
 
 export default function Hero() {
   const { language } = useLanguage();
@@ -8,17 +10,13 @@ export default function Hero() {
   const TEXT = {
     en: {
       title1: "Divine Spiritual",
-      title2: "Services",
-      subtitle:
-        "Experience the divine with authentic Vedic rituals performed by our experienced Pandit Ji for your spiritual needs.",
+      subtitle: "Experience the divine with authentic Vedic rituals performed by our experienced Pandit Ji for your spiritual needs.",
       button1: "Our Services",
       button2: "Book Now",
     },
     hi: {
       title1: "दिव्य आध्यात्मिक",
-      title2: "सेवाएं",
-      subtitle:
-        "हमारे अनुभवी पंडित जी द्वारा किए गए प्रामाणिक वैदिक अनुष्ठानों के साथ दिव्यता का अनुभव करें।",
+      subtitle: "हमारे अनुभवी पंडित जी द्वारा किए गए प्रामाणिक वैदिक अनुष्ठानों के साथ दिव्यता का अनुभव करें।",
       button1: "हमारी सेवाएं",
       button2: "अभी बुक करें",
     },
@@ -44,21 +42,35 @@ export default function Hero() {
         <span className="absolute bottom-1/3 left-1/4 text-7xl opacity-5 text-white animate-moveRightToLeft">शिव</span>
       </div>
 
-      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center w-full">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 text-center w-full">
+        {/* Title */}
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
             {t.title1}
           </span>
-          <br />
-          <span className="text-white">{t.title2}</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-amber-100 mb-6 max-w-3xl mx-auto">
+        {/* Ganeshji Image - Centered */}
+        <div className="flex justify-center my-6">
+          <div className="w-92 h-72 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg border-4 border-amber-400/30">
+            <Image
+              src="/images/ganeshji.jpg"
+              alt="Lord Ganesha"
+              width={700}
+              height={800}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-amber-100 mb-6 max-w-3xl mx-auto px-4">
           {t.subtitle}
         </p>
 
-        {/* YouTube Video Embed - Updated with your new link */}
-        <div className="mb-10 mx-auto w-full max-w-xl rounded-lg overflow-hidden shadow-2xl">
+        {/* YouTube Video Embed */}
+        <div className="mb-8 mx-auto w-full max-w-xl rounded-lg overflow-hidden shadow-2xl">
           <iframe
             width="100%"
             height="250"
@@ -67,23 +79,47 @@ export default function Hero() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-[250px] sm:h-[300px] md:h-[350px]"
+            className="w-full h-[200px] sm:h-[250px] md:h-[300px]"
           ></iframe>
         </div>
 
+        {/* Zodiac Rotator - Centered */}
+        <div className="flex justify-center my-6">
+          <div className="w-92 h-88 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg animate-spin-slow border-4 border-purple-400/30">
+            <Image
+              src="/images/zodhindi.jpg"
+              alt="Rotating zodiac image"
+              width={700}
+              height={800}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
+        {/* Krishnaji Image - Centered */}
+        <div className="flex justify-center my-6">
+  <div className="w-92 h-88 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg  animate-swing">
+    <Image
+      src="/images/krishnaji.jpg"
+      alt="Lord Krishna"
+      width={700}
+      height={800}
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
 
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-8">
           <Link
             href="/services"
-            className="px-10 py-4 bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold rounded-full hover:from-amber-300 hover:to-amber-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/40"
+            className="px-8 py-3 sm:px-10 sm:py-4 bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold rounded-full hover:from-amber-300 hover:to-amber-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/40 text-sm sm:text-base"
           >
             {t.button1}
           </Link>
           <Link
             href="/contact"
-            className="px-10 py-4 border-2 border-amber-400 text-amber-300 font-bold rounded-full hover:bg-amber-400/10 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-400/20"
+            className="px-8 py-3 sm:px-10 sm:py-4 border-2 border-amber-400 text-amber-300 font-bold rounded-full hover:bg-amber-400/10 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-400/20 text-sm sm:text-base"
           >
             {t.button2}
           </Link>
