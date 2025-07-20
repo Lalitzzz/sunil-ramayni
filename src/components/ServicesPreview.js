@@ -7,7 +7,7 @@ import { useLanguage } from "@/app/context/LanguageContext";
 export default function ServicesPreview() {
   const { language } = useLanguage();
 
-  // 🟡 Language data inline yahi par define
+  // Language data
   const servicesText = {
     en: {
       heading: "Our Sacred Services",
@@ -51,8 +51,17 @@ export default function ServicesPreview() {
     },
   };
 
-  const t = servicesText[language]; // 🟢 Selected language data
-  const icons = [<FaBook />, <FaOm />, <FaFire />];
+  const t = servicesText[language];
+  
+  // Icon mapping by service title
+  const serviceIcons = {
+    "Ramayan Path": <FaBook className="text-3xl text-amber-400" />,
+    "Bhagwat Katha": <FaOm className="text-3xl text-amber-400" />,
+    "Havan/Yagya": <FaFire className="text-3xl text-amber-400" />,
+    "रामायण पाठ": <FaBook className="text-3xl text-amber-400" />,
+    "भागवत कथा": <FaOm className="text-3xl text-amber-400" />,
+    "हवन/यज्ञ": <FaFire className="text-3xl text-amber-400" />
+  };
 
   return (
     <div className="bg-gradient-to-b from-indigo-900 to-purple-900 py-20 relative overflow-hidden">
@@ -90,7 +99,7 @@ export default function ServicesPreview() {
               <div className="relative z-10">
                 <div className="mb-6 flex justify-center">
                   <div className="p-4 bg-gradient-to-br from-amber-500/20 to-amber-600/30 rounded-full">
-                    <span className="text-3xl text-amber-400">{icons[index]}</span>
+                    {serviceIcons[service.title]}
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-amber-300 mb-3">
