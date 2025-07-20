@@ -166,7 +166,7 @@ export default function Navbar() {
             <FaEnvelope className="mr-2 text-xs" /> {t.contact}
           </Link>
           <a
-            href="tel:+919876543210"
+            href="tel:+919610719306"       
             className="block px-2 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center mt-1 transition-colors"
             onClick={() => setIsOpen(false)}
             title={t.call}
