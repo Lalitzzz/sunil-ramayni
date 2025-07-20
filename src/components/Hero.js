@@ -42,7 +42,7 @@ export default function Hero() {
         <span className="absolute bottom-1/3 left-1/4 text-7xl opacity-5 text-white animate-moveRightToLeft">शिव</span>
       </div>
 
-      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 text-center w-full">
+      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 text-center w-full" style={{ marginTop: '4rem' }}>
         {/* Title */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
