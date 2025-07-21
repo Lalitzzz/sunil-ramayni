@@ -211,6 +211,25 @@ export default function SanatanDharmaPage() {
           </p>
         </div>
 
+
+
+        <div className="flex justify-center items-center my-8">
+  <div className="w-full max-w-2xl rounded-lg overflow-hidden shadow-xl border border-gray-200">
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      className="w-full h-auto"
+    >
+      {/* यहाँ सही नाम डालें */}
+     <source src="/mp4%20video.mp4" type="video/mp4" />
+
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
         {/* Essence of Sanatan Dharma */}
         <div className="bg-indigo-900/40 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-16 border border-indigo-400/20">
           <p className="text-lg md:text-xl text-amber-100 text-center">

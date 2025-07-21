@@ -86,7 +86,24 @@ export default function ServicesPreview() {
             {t.subheading}
           </p>
         </div>
+              
 
+               <div className="flex justify-center items-center my-8">
+  <div className="w-full max-w-2xl rounded-lg overflow-hidden shadow-xl border border-gray-200">
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      className="w-full h-auto"
+    >
+      {/* यहाँ सही नाम डालें */}
+     <source src="/sadur.mp4" type="video/mp4" />
+
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {t.services.map((service, index) => (
             <div
