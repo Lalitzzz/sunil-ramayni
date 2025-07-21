@@ -85,7 +85,7 @@ export default function Hero() {
 
         {/* Zodiac Rotator - Centered */}
         <div className="flex justify-center my-6">
-          <div className="w-92 h-88 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg animate-spin-slow border-4 border-purple-400/30">
+          <div className="w-92 h-92 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg animate-spin-slow ">
             <Image
               src="/images/zodhindi.jpg"
               alt="Rotating zodiac image"

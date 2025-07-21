@@ -23,6 +23,7 @@ export default function Navbar() {
       services: "Services",
       contact: "Contact",
       about: "About",
+      sanatanDharma: "Sanatan Dharma", // Added this
       language: "हिंदी",
       call: "Call Now",
       menu: "Menu",
@@ -32,6 +33,7 @@ export default function Navbar() {
       services: "सेवाएं",
       contact: "संपर्क करें",
       about: "परिचय",
+      sanatanDharma: "सनातन धर्म", // Added this
       language: "English",
       call: "कॉल करें",
       menu: "मेन्यू",
@@ -78,6 +80,14 @@ export default function Navbar() {
             >
               <FaBookOpen className="inline mr-1" />
               <span className="hidden sm:inline">{t.services}</span>
+            </Link>
+            <Link
+              href="/SanatanDharmaPage"
+              className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium px-2 py-1"
+              title={t.sanatanDharma}
+            >
+              <FaBookOpen className="inline mr-1" />
+              <span className="hidden sm:inline">{t.sanatanDharma}</span>
             </Link>
             <Link
               href="/contact"
@@ -157,6 +167,13 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             <FaBookOpen className="mr-2 text-xs" /> {t.services}
+          </Link>
+          <Link
+            href="/SanatanDharmaPage"
+            className="block px-2 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-white hover:bg-purple-600 flex items-center transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            <FaBookOpen className="mr-2 text-xs" /> {t.sanatanDharma}
           </Link>
           <Link
             href="/contact"
