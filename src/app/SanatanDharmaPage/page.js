@@ -261,7 +261,7 @@ export default function SanatanDharmaPage() {
               <div key={index} className="bg-indigo-900/30 p-6 rounded-lg">
                 <p className="text-lg font-semibold text-amber-300 mb-1">{doha.verse}</p>
                 <p className="text-xl text-white mb-2 font-medium">{doha.text}</p>
-                <p className="text-md text-amber-100 italic">"{doha.meaning}"</p>
+                <p className="text-md text-amber-100 italic">{doha.meaning}</p>
               </div>
             ))}
           </div>
